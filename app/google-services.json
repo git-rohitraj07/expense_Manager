@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "974396162232",
+    "project_id": "expense-manager-cbbdb",
+    "storage_bucket": "expense-manager-cbbdb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:974396162232:android:c5808e9077acc5f0bbf44d",
+        "android_client_info": {
+          "package_name": "com.example.expense_manager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "974396162232-4chh0acmkmgb79sbm23k10lp2sj902ds.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPtQmwtUKCEoyIVzQc0GhoCYXgCAgGiNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "974396162232-4chh0acmkmgb79sbm23k10lp2sj902ds.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
