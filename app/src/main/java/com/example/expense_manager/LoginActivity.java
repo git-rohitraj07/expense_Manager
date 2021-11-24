@@ -1,5 +1,6 @@
 package com.example.expense_manager;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,13 +10,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+
+public class LoginActivity extends AppCompatActivity {
     private EditText mEmail;
     private EditText mPass;
     private Button btnLogin;
     private TextView mForgetPassword;
     private TextView mSignUp;
+    private FirebaseAuth mauth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +52,20 @@ public class MainActivity extends AppCompatActivity {
                     mPass.setError("Password Required..");
                     return;
                 }
+                FirebaseAuth mauth=FirebaseAuth.getInstance();
+                mauth.signInWithEmailAndPassword(email,pass)
+                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if(task.isSuccessful()){
+                                    startActivity(new Intent(getApplicationContext(),ContentActivity.class));
+                                    finish();
+                                }
+                                else{
+                                    Toast.makeText(getApplicationContext(),"Error occured",Toast.LENGTH_LONG).show();
+                                }
+                            }
+                        });
 
             }
         });

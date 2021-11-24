@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@drawable/back_color"
-    tools:context=".MainActivity">
+    tools:context=".LoginActivity">
 <ScrollView
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
